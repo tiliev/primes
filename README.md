@@ -9,3 +9,6 @@ For numbers up to 128 bytes we use Miller-Rabin test. It is a test for composite
 
 # Documentation
 To see the API documentation of the service, run the project and open `index.html`.
+
+# Docker support
+The API has `Dockerfile` if you need to run it on Docker.

@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Primes.API", "Primes.API\Primes.API.csproj", "{10BCD3D5-B666-4905-958A-CF2E70397FD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primes.Core", "Primes.Core\Primes.Core.csproj", "{0A9B7F4E-9618-43E6-A189-D61C30A4F4D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Primes.Core", "Primes.Core\Primes.Core.csproj", "{0A9B7F4E-9618-43E6-A189-D61C30A4F4D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primes.Core.Tests", "Primes.Core.Tests\Primes.Core.Tests.csproj", "{5F639A2A-1AEC-4A17-AE8E-B4B0A3586844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Primes.Core.Tests", "Primes.Core.Tests\Primes.Core.Tests.csproj", "{5F639A2A-1AEC-4A17-AE8E-B4B0A3586844}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{00298D30-CD3E-4975-9B77-DCACA639B84D}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
