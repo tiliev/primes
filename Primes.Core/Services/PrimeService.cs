@@ -14,9 +14,9 @@ namespace Primes.Core.Services
         /// <summary>
         /// Primality test.
         /// For 64-bit numbers it uses linear algorithm with 100% accuracy.
-        /// For bigger numbers up to 128 bytes it uses Miller-Rabin test.
+        /// For greater numbers up to 128 bytes it uses Miller-Rabin test.
         /// </summary>
-        /// <param name="num">The number for the primality test. Its size should be <= 128 bytes.</param>
+        /// <param name="num">The number for the primality test. Its size should be &lt;= 128 bytes.</param>
         /// <returns>Whether the number is prime or not.</returns>
         public OperationResult<PrimalityTestResult> IsPrime(BigInteger num)
         {
@@ -55,20 +55,20 @@ namespace Primes.Core.Services
 
         /// <summary>
         /// Finds next prime after a given number.
-        /// The size of the next prime should be <= 128 bytes.
+        /// The size of the next prime should be &lt;= 128 bytes.
         /// For 64-bit numbers it uses linear algorithm with 100% accuracy.
-        /// For bigger numbers up to 128 bytes it uses Miller-Rabin test.
+        /// For greater numbers up to 128 bytes it uses Miller-Rabin test.
         /// </summary>
         /// <param name="num">The number after which the next prime is searched for.
-        /// Its size should be < 128 bytes.
+        /// Its size should be &lt;= 128 bytes.
         /// </param>
         /// <returns>The next prime.</returns>
         public OperationResult<NextPrimeResult> FindNextPrime(BigInteger num)
         {
-            if (num.GetByteCount() >= MILLER_RABIN_NUM_BYTES_LIMIT)
+            if (num.GetByteCount() > MILLER_RABIN_NUM_BYTES_LIMIT)
             {
                 return new OperationResult<NextPrimeResult>(
-                    false, $"The number size should be < {MILLER_RABIN_NUM_BYTES_LIMIT} bytes.");
+                    false, $"The number size should be <= {MILLER_RABIN_NUM_BYTES_LIMIT} bytes.");
             }
 
             if (num < 2)
@@ -121,7 +121,7 @@ namespace Primes.Core.Services
 
         /// <summary>
         /// Finds next prime. 
-        /// The size of the next prime should be <= 128 bytes.
+        /// The size of the next prime should be &lt;= 128 bytes.
         /// </summary>
         /// <param name="num">The number after which the next prime is searched for.</param>
         /// <returns>Returns the next prime.</returns>

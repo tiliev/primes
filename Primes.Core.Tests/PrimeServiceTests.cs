@@ -219,7 +219,7 @@ namespace Primes.Core.Tests
             Assert.AreEqual(true, result.Succeeded, $"Error: {result.Error}");
 
             // next prime test
-            Assert.AreEqual(expectedNextPrime,
+            Assert.AreEqual(expectedNextPrime.ToString(),
                 result.Value.NextPrime, $"Next prime should be {expectedNextPrime}.");
 
             // accuracy

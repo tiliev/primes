@@ -4,7 +4,8 @@ namespace Primes.API.Controllers
 {
     public class ErrorController : BaseController
     {
-        [Route("/error")]
+        [HttpPost("/error")]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Error() => Problem();
     }
 }
