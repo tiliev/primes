@@ -6,14 +6,14 @@ namespace Primes.Core.DTOs
     {
         public NextPrimeResult(BigInteger nextPrime, double accuracy)
         {
-            NextPrime = nextPrime;
+            NextPrime = nextPrime.ToString();
             Accuracy = accuracy;
         }
 
         /// <summary>
         /// The next prime.
         /// </summary>
-        public BigInteger NextPrime { get; }
+        public string NextPrime { get; }
 
         /// <summary>
         /// Shows how accurate is the algorithm of finding the next prime.
